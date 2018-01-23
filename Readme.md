@@ -6,21 +6,23 @@
 
 http://ass-node.herokuapp.com/
 
-* it uses session-id as user-id
-* it uses private bucket
+notice it is `http://` not `https://`
+
+* session-id as user-id
+* private bucket
 * policy of uploading with callback
 
 ## To run locally:
 
 * `ngrok http 8000`  
-    then replace [callback host](./serverConfig/common.js.js#line1) with generated ngrok host url
-
+    then replace [callback host](./serverConfig/common.js#line1) with generated ngrok host url
 
 * ENV your aliyun bucket and accesskey as
     `OSS_KEY_ID`  
     `OSS_KEY_SECRET`  
     `OSS_BUCKET`  
     `OSS_REGION`  
+
 ## Uses:
 
 * Unload JS Module: fine-uploader
