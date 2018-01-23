@@ -1,4 +1,4 @@
-const host = '0c66d1f8.ngrok.io';
+const host = 'http://0c66d1f8.ngrok.io';
 
 export default {
   host,
@@ -15,5 +15,5 @@ export default {
   ass_bucket: process.env.OSS_BUCKET,
   ass_region: process.env.OSS_REGION,
 
-  callbackUrl: `http://${host}/api/callback`,
+  callbackUrl: `${host}/api/callback`,
 };

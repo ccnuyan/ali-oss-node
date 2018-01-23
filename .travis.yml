@@ -18,7 +18,7 @@ install:
 before_script:
 # - webpack
 script: 
-- webpack
+- npm run build
 - npm run test-ci
 # - docker pull node:8
 # - docker build -f ./appprod.Dockerfile -t ass-node:build .
