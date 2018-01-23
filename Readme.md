@@ -17,7 +17,7 @@ notice it is `http://` not `https://`
 * `ngrok http 8000`  
     then replace [callback host](./serverConfig/common.js#line1) with generated ngrok host url
 
-* ENV your aliyun bucket and accesskey as
+* ENV your aliyun bucket and accesskey as  
     `OSS_KEY_ID`  
     `OSS_KEY_SECRET`  
     `OSS_BUCKET`  
@@ -27,5 +27,5 @@ notice it is `http://` not `https://`
 
 * Unload JS Module: fine-uploader
 * UI: semantic
-* Frontend: react redux immutabele
+* Frontend: react redux immutable
 * Backend: express
