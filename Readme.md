@@ -1,6 +1,6 @@
 [![Build Status](https://www.travis-ci.org/ccnuyan/ass-node.svg?branch=master)](https://www.travis-ci.org/ccnuyan/ass-node)
 
-> This is a lightweight db-less example, helps node.js developers to employ aliyun-oss (ass) as their object storge service:
+> This is a lightweight db-less example, helps node.js developers to employ aliyun-oss (ass) as their object storage service:
 
 ## Demo 
 

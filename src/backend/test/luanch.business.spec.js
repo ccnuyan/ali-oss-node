@@ -18,8 +18,8 @@ describe('file business', function () { // eslint-disable-line
   });
 
   it('could return filename', () => {
-    this.res.body.data.multipart.should.have.property('name');
-    this.res.body.data.multipart.name.should.equal(this.filename);
+    this.res.body.data.multipart.should.have.property('filename');
+    this.res.body.data.multipart.filename.should.equal(this.filename);
   });
 
   it('could return callback', () => {
@@ -34,7 +34,7 @@ describe('file business', function () { // eslint-disable-line
 
   it('could return the correct host', () => {
     this.res.body.data.should.have.property('host');
-    this.res.body.data.host.should.equal('http://post-test.oss-cn-hangzhou.aliyuncs.com');
+    this.res.body.data.host.should.equal('http://ass-node-test.oss-cn-shanghai.aliyuncs.com');
   });
 
   it('could return the correct policy', () => {
