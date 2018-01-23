@@ -1,0 +1,26 @@
+{
+    "workbench.sideBar.location": "left",
+    "extensions.ignoreRecommendations": true,
+    "window.zoomLevel": 0,
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "files.eol": "\n",
+    "eslint.autoFixOnSave": true,
+    "files.exclude": {
+        "**/.git": true,         // this is a default value
+        "**/.DS_Store": true,    // this is a default value
+
+        "**/node_modules": true, // this excludes all folders 
+                                 // named "node_modules" from 
+                                 // the explore tree
+
+        // alternative version
+        "node_modules": true,    // this excludes the folder 
+                                // only from the root of
+                                // your workspace 
+        "build": true,
+        "public": true
+    }
+}

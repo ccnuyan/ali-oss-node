@@ -1,0 +1,132 @@
+{
+  "name": "ass-node",
+  "version": "1.0.0",
+  "description": "node backend of aliyun oss",
+  "scripts": {
+    "server-dev": "nodemon --config nodemon.json --delay 3",
+    "webpack-dev": "cross-env NODE_ENV=development && webpack-dev-server --host 127.0.0.1",
+    "ngrok": "ngrok http 8000",
+    "start-dev": "npm-run-all -p webpack-dev server-dev",
+    "build": "webpack --config=./webpack.build.config.js",
+    "start": "babel-node ./src/index.js",
+    "test": "./node_modules/.bin/mocha --opts ./mocha.dev.opts ./src/**/*.spec.js",
+    "test-ci": "./node_modules/.bin/mocha --opts ./mocha.ci.opts ./src/**/*.spec.js",
+    "heroku-prebuild": "npm i --only=production && npm i --only=dev && npm i -g webpack babel-cli",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccnuyan/ass-node.git"
+  },
+  "keywords": [
+    "aliyun",
+    "oss",
+    "backend",
+    "node"
+  ],
+  "author": "ccnuyan",
+  "license": "MIT",
+  "engines": {
+    "node": "8.9.x",
+    "npm": "5.6.x"
+  },
+  "bugs": {
+    "url": "https://github.com/ccnuyan/ass-node/issues"
+  },
+  "homepage": "https://github.com/ccnuyan/ass-node#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cookie-parser": "^1.4.3",
+    "cross-env": "^5.1.3",
+    "cross-fetch": "^1.1.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "urlencode": "^1.1.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "ali-oss": "^4.11.4",
+    "assets-webpack-plugin": "^3.5.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "chalk": "^2.3.0",
+    "css-loader": "^0.28.9",
+    "env-test": "^1.0.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "f": "^1.4.0",
+    "file-size": "^1.0.0",
+    "fine-uploader": "^5.15.5",
+    "immutable": "^3.8.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+      "standard",
+      "import",
+      "mocha",
+      "react",
+      "jsx-a11y",
+      "promise"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:mocha/recommended",
+      "plugin:promise/recommended",
+      "plugin:jsx-a11y/recommended",
+      "airbnb/base"
+    ],
+    "env": {
+      "mocha": true,
+      "browser": true,
+      "es6": true
+    },
+    "globals": {
+      "$": true,
+      "printError": true,
+      "printMessage": true,
+      "chai": true,
+      "expect": true,
+      "should": true,
+      "serverConfig": true,
+      "_": true
+    },
+    "rules": {
+      "import/no-extraneous-dependencies": 0,
+      "max-len": [
+        "error",
+        160
+      ]
+    }
+  }
+}

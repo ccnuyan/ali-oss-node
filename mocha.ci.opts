@@ -1,0 +1,4 @@
+--require=env-test
+--require=babel-core/register
+--require=babel-polyfill
+--watch-extensions js,sql
